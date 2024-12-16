@@ -168,7 +168,17 @@ function App() {
       <h2>{title}</h2>
       <p><em>{datePublished}</em></p>
 
-      <div style={{ border: '1px solid #ccc', padding: '1rem', marginBottom: '1rem' }}>
+      {/* The markdown container with min and max width in rem (50rem ~ 800px) */}
+      <div 
+        style={{ 
+          border: '1px solid #ccc', 
+          padding: '1rem', 
+          marginBottom: '1rem', 
+          maxWidth: '50rem', 
+          minWidth: '50rem', 
+          margin: '0 auto' 
+        }}
+      >
         <ReactMarkdown>{editedMarkdown}</ReactMarkdown>
       </div>
 
@@ -176,7 +186,7 @@ function App() {
       <textarea
         value={editedMarkdown}
         onChange={handleEdit}
-        style={{ width: '100%', height: '400px', marginBottom: '1rem' }}
+        style={{ width: '50rem', height: '400px', marginBottom: '1rem' }}
       ></textarea>
 
       <div>
@@ -192,7 +202,7 @@ function App() {
       <textarea
         value={editedPlain}
         onChange={handlePlainEdit}
-        style={{ width: '100%', height: '400px', marginBottom: '1rem' }}
+        style={{ width: '50rem', height: '400px', marginBottom: '1rem' }}
       ></textarea>
 
       <div>
